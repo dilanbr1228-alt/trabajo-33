@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Macizo</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+        <div class="contenedor header-contenido">
+            <div class="logo-container">
+                <span class="logo-icon"></span>
+                <span class="logo-text">Café Macizo</span>
+            </div>
+            <nav class="nav">
+                <a href="#productos">Productos</a>
+                <a href="#paleta">Paleta</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO CON FONDO DE DOS CAPAS -->
+        <section class="hero">
+            <div class="contenedor">
+                <h2>Café de altura, cultivado en el Macizo Colombiano</h2>
+                <p>Granos seleccionados a mano por familias caficultoras del Cauca. Tostión artesanal, sabor con notas de panela y frutos rojos.</p>
+                <div class="hero-botones">
+                    <a href="#productos" class="btn btn--amarillo">Ver productos</a>
+                    <a href="#contacto" class="btn btn--borde">Escríbenos</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PRODUCTOS CON IMÁGENES REALES -->
+        <section class="contenedor seccion-productos" id="productos">
+            <h2>Nuestros productos</h2>
+            <div class="tarjetas">
+                <!-- Tarjeta 1 -->
+                <article class="tarjeta">
+                    <div class="tarjeta_img">
+                        <img src="cafe.jpg" alt="Café en grano">
+                    </div>
+                    <div class="tarjeta_cuerpo">
+                        <h3>Café en grano</h3>
+                        <p>Bolsa de 500 g. Ideal para moler en casa.</p>
+                        <p class="precio">$ 32.000</p>
+                        <a href="#" class="btn-comprar">Comprar</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 2 -->
+                <article class="tarjeta">
+                    <div class="tarjeta_img">
+                        <img src="molido.jpg" alt="Café molido">
+                    </div>
+                    <div class="tarjeta_cuerpo">
+                        <h3>Café molido</h3>
+                        <p>Molienda media para greca o filtro.</p>
+                        <p class="precio">$ 28.000</p>
+                        <a href="#" class="btn-comprar">Comprar</a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta 3 -->
+                <article class="tarjeta">
+                    <div class="tarjeta_img">
+                        <img src="cata.jpg" alt="Kit de cata">
+                    </div>
+                    <div class="tarjeta_cuerpo">
+                        <h3>Kit de cata</h3>
+                        <p>Tres orígenes del Cauca para comparar.</p>
+                        <p class="precio">$ 45.000</p>
+                        <a href="#" class="btn-comprar">Comprar</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE LA PALETA DE COLORES -->
+        <section class="contenedor seccion-paleta" id="paleta">
+            <h2>Nuestra paleta de colores</h2>
+            <p class="paleta-descripcion">Partimos de un color base (café tostado) y en HSL variamos solo la luminosidad para obtener tonos; luego sumamos un secundario y un acento.</p>
+            
+            <div class="paleta-grid">
+                <div class="color-item">
+                    <div class="muestra_color color-900"></div>
+                    <span>Primario 900<br>#372010</span>
+                </div>
+                <div class="color-item">
+                    <div class="muestra_color color-700"></div>
+                    <span>Primario 700<br>#633D21</span>
+                </div>
+                <div class="color-item">
+                    <div class="muestra_color color-500"></div>
+                    <span>Primario 500<br>#9B633B</span>
+                </div>
+                <div class="color-item">
+                    <div class="muestra_color color-300"></div>
+                    <span>Primario 300<br>#CEA37E</span>
+                </div>
+                <div class="color-item">
+                    <div class="muestra_color color-100"></div>
+                    <span>Primario 100<br>#F2E6D9</span>
+                </div>
+                <div class="color-item">
+                    <div class="muestra_color color-secundario"></div>
+                    <span>Secundario<br>#326744</span>
+                </div>
+                <div class="color-item">
+                    <div class="muestra_color color-acento"></div>
+                    <span>Acento<br>#F4AF25</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer" id="contacto">
+        <div class="contenedor">
+            <p>Café Macizo - Popayán, Cauca - contacto@cafemacizo.co</p>
+            <p class="footer-small">Proyecto de práctica SENA - Unidades de medida en CSS</p>
+        </div>
+    </footer>
+
+</body>
+</html>

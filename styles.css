@@ -1,0 +1,297 @@
+/* --- 1. RESET Y BASE --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%; /* Base 16px del navegador[cite: 15, 36] */
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: var(--fondo);
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* --- 2. PALETA DE COLORES EN VARIABLES (:root) --- */
+:root {
+    --primario-900: #372010;
+    --primario-700: #633D21;
+    --primario-500: #9B633B;
+    --primario-300: #CEA37E;
+    --primario-100: #F2E6D9;
+    --secundario: #326744;
+    --acento: #F4AF25;
+    --fondo: #F9F6F0;
+    --texto: #292019;
+}
+
+/* --- 3. CONTENEDOR CENTRADO --- */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- 4. TIPOGRAFÍA EN REM --- */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.25rem; }
+
+/* --- 5. ENCABEZADO Y MENÚ --- */
+.header {
+    background-color: var(--primario-700);
+    padding: 0.8rem 0;
+    border-bottom: 4px solid var(--acento); /* Línea dorada fija en px[cite: 30, 38] */
+}
+
+.header-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+    padding: 0.25em 0.5em; /* em para escalar con el texto[cite: 30] */
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- 6. HERO CON BACKGROUND DE DOS CAPAS --- */
+.hero {
+    padding: 4.5rem 0;
+    color: white;
+    text-align: center;
+    /* Capa 1: Degradado semitransparente | Capa 2: Color sólido café de fondo[cite: 4, 25] */
+    background: linear-gradient(135deg, rgba(55, 32, 16, 0.92), rgba(50, 103, 68, 0.85)), 
+                var(--primario-700);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin: 0 auto 2rem auto;
+    max-width: 45em; /* em para ancho de línea[cite: 16] */
+    font-size: 1rem;
+    color: #f0e6df;
+}
+
+.hero-botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* --- 7. TARJETAS DE PRODUCTOS CON IMÁGENES REALES --- */
+.seccion-productos {
+    padding: 3.5rem 0;
+}
+
+.seccion-productos h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primario-700);
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%; /* Columnas fluidas en porcentaje[cite: 39] */
+}
+
+.tarjeta {
+    width: 32%;
+    background: white;
+    border: 1px solid #e2d2c4;
+    border-radius: 8px; /* Esquinas redondeadas en px[cite: 13, 39] */
+    box-shadow: 0 4px 12px rgba(55, 32, 16, 0.08);
+    overflow: hidden;
+}
+
+.tarjeta_img {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--primario-100);
+}
+
+.tarjeta_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen perfectamente sin deformarla */
+    display: block;
+}
+
+.tarjeta_cuerpo {
+    padding: 1.5rem;
+}
+
+.tarjeta_cuerpo h3 {
+    color: var(--primario-900);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta_cuerpo p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-weight: bold;
+    color: var(--secundario) !important;
+    font-size: 1.1rem !important;
+    margin-bottom: 1.2rem !important;
+}
+
+/* --- 8. BOTONES QUE ESCALAN CON EM --- */
+.btn {
+    display: inline-block;
+    font-size: 0.95rem;
+    padding: 0.6em 1.4em; /* em para adaptación proporcional[cite: 16, 40] */
+    border-radius: 0.4em;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn--amarillo {
+    background-color: var(--acento);
+    color: var(--primario-900);
+}
+
+.btn--borde {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: white;
+}
+
+.btn-comprar {
+    display: inline-block;
+    background-color: var(--primario-700);
+    color: white;
+    padding: 0.5em 1.2em;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.btn-comprar:hover, .btn--amarillo:hover {
+    opacity: 0.9;
+}
+
+/* --- 9. SECCIÓN DE LA PALETA DE COLORES --- */
+.seccion-paleta {
+    padding: 3rem 0 4rem 0;
+    text-align: center;
+}
+
+.seccion-paleta h2 {
+    color: var(--primario-700);
+    margin-bottom: 0.5rem;
+}
+
+.paleta-descripcion {
+    max-width: 48em;
+    margin: 0 auto 2.5rem auto;
+    color: #555;
+    font-size: 0.9rem;
+}
+
+.paleta-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.color-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: var(--primario-900);
+    line-height: 1.2;
+}
+
+.muestra_color {
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%; /* Círculo perfecto[cite: 14, 32] */
+    margin-bottom: 0.6rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.color-900 { background-color: var(--primario-900); }
+.color-700 { background-color: var(--primario-700); }
+.color-500 { background-color: var(--primario-500); }
+.color-300 { background-color: var(--primario-300); }
+.color-100 { background-color: var(--primario-100); border: 1px solid #dcd1c4; }
+.color-secundario { background-color: var(--secundario); }
+.color-acento { background-color: var(--acento); }
+
+/* --- PIE DE PÁGINA --- */
+.footer {
+    background-color: var(--primario-900);
+    color: #dcd1c4;
+    text-align: center;
+    padding: 2.5rem 0;
+    font-size: 0.85rem;
+}
+
+.footer p {
+    margin-bottom: 0.3rem;
+}
+
+.footer-small {
+    font-size: 0.75rem;
+    color: #a89a8e;
+}
+
+/* --- 10. MEDIA QUERY EN EMS (Adaptabilidad exigida por la guía) --- */
+@media (max-width: 48em) { /* 48em equivalen a 768px[cite: 41] */
+    .header-contenido {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+    
+    .nav {
+        margin-left: 0;
+    }
+
+    .tarjeta {
+        width: 100%; /* Las tarjetas se apilan de a una en celulares[cite: 41] */
+        margin-bottom: 1.5rem;
+    }
+
+    .paleta-grid {
+        gap: 1rem;
+    }
+}
